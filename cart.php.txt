@@ -1,0 +1,18 @@
+Use this code:
+
+
+add_filter( 'woocommerce_add_to_cart_validation', 'one_cart_item_at_the_time', 10, 3 );
+function one_cart_item_at_the_time( $passed, $product_id, $quantity ) {
+    if( ! WC()->cart->is_empty())
+        WC()->cart->empty_cart();
+    return $passed;
+}
+add_filter( 'woocommerce_add_to_cart_redirect', 'add_to_cart_checkout_redirection', 10, 1 );
+function add_to_cart_checkout_redirection( $url ) {
+    return wc_get_checkout_url();
+}
+add_action('template_redirect', 'skip_cart_page_redirection_to_checkout');
+function skip_cart_page_redirection_to_checkout() {
+    if( is_cart() )
+        wp_redirect( wc_get_checkout_url() );
+}

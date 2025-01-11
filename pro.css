@@ -1,0 +1,35 @@
+/* Variation Swatches for WooCommerce*/
+.thwvsf-wrapper-ul {
+  justify-content: center;
+}
+.thwvsf-wrapper-ul .thwvsf-wrapper-item-li.thwvsf-label-li.attr_swatch_design_default {
+  padding: .5rem;
+  position: relative;
+}
+.thwvsf-wrapper-ul .thwvsf-wrapper-item-li.attr_swatch_design_default.thwvsf-selected{
+  background: #5dff003d;
+}
+span.gaming_topup_gt {
+    position: relative;
+    top: -8px;
+    font-size: 13px;
+    color: red;
+}
+@media screen and (max-width: 503px){
+span.gaming_topup_gt {
+    position: absolute;
+    top: -5px;
+    font-size: 11px;
+    color: red;
+    right: 5px
+        
+}    
+    
+.thwvsf-wrapper-ul .thwvsf-label-li.attr_swatch_design_default .thwvsf-item-span.item-span-text {
+    font-size: 12px;
+}
+.thwvsf-wrapper-ul .thwvsf-wrapper-item-li.thwvsf-label-li.attr_swatch_design_default {
+  padding: 10px 0px;
+}
+    
+}
